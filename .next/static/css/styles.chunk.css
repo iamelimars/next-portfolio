@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900);
+.header-container {
+  height: calc(100vh - 56px);
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: -56px;
+  color: #fff;
+  width: 100vw; }
+  .header-container .header-canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -3;
+    min-height: 700px; }
+  .header-container .leftContainer {
+    padding: 40px;
+    text-align: center; }
+    .header-container .leftContainer h1 {
+      animation: fade-in 2s;
+      opacity: 1;
+      font-weight: 900;
+      font-size: 44px;
+      font-family: 'Roboto', sans-serif; }
+      .header-container .leftContainer h1 b {
+        color: rgba(255, 255, 255, 0.5); }
+  .header-container .rightContainer {
+    width: 50%; }
+    .header-container .rightContainer h4 {
+      padding: 30px;
+      animation: fade-in 2s;
+      font-weight: bold; }
+    .header-container .rightContainer .logoContainer {
+      color: white;
+      position: relative;
+      width: 360px;
+      height: 250px;
+      margin-top: 200px;
+      transform: rotate(-30deg) skew(25deg) scale(0.8);
+      transition: 0.5s;
+      animation: skew-logo 2s;
+      animation-delay: 1s;
+      opacity: 1; }
+      .header-container .rightContainer .logoContainer img {
+        position: absolute;
+        width: 100%;
+        transition: 0.5s; }
+    .header-container .rightContainer .logoContainer img:nth-child(4) {
+      transform: translate(60px, -60px);
+      opacity: 1;
+      -webkit-animation: image-4 2s infinite;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-direction: alternate;
+      /* Safari 4.0 - 8.0 */
+      animation: image-4 2s infinite;
+      animation-direction: alternate; }
+    .header-container .rightContainer .logoContainer img:nth-child(3) {
+      transform: translate(40px, -40px);
+      opacity: .8;
+      -webkit-animation: image-3 2s infinite;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-direction: alternate;
+      /* Safari 4.0 - 8.0 */
+      animation: image-3 2s infinite;
+      animation-direction: alternate; }
+    .header-container .rightContainer .logoContainer img:nth-child(2) {
+      transform: translate(20px, -20px);
+      opacity: .6;
+      -webkit-animation: image-2 2s infinite;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-direction: alternate;
+      /* Safari 4.0 - 8.0 */
+      animation: image-2 2s infinite;
+      animation-direction: alternate; }
+    .header-container .rightContainer .logoContainer img:nth-child(1) {
+      transform: translate(0px, 0px);
+      opacity: .4;
+      -webkit-animation: image-1 2s infinite;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-direction: alternate;
+      /* Safari 4.0 - 8.0 */
+      animation: image-1 2s infinite;
+      animation-direction: alternate; }
+
+@keyframes image-4 {
+  0% {
+    transform: translate(60px, -60px); }
+  100% {
+    transform: translate(160px, -160px); } }
+
+@keyframes image-3 {
+  0% {
+    transform: translate(40px, -40px); }
+  100% {
+    transform: translate(120px, -120px); } }
+
+@keyframes image-2 {
+  0% {
+    transform: translate(20px, -20px); }
+  100% {
+    transform: translate(80px, -80px); } }
+
+@keyframes image-1 {
+  0% {
+    transform: translate(0px, 0px); }
+  100% {
+    transform: translate(40px, -40px); } }
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.desktop-wrapper {
+  position: relative;
+  width: 70%;
+  height: 21vw;
+  min-width: 200px;
+  min-height: 300px;
+  animation: fade-in 4s; }
+  .desktop-wrapper .desktop-container {
+    box-shadow: 0 15px 28px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0px 0px; }
+    .desktop-wrapper .desktop-container .desktop-head {
+      position: absolute;
+      z-index: 1;
+      border-radius: 5px 5px 0px 0px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 21px;
+      background: #fff; }
+      .desktop-wrapper .desktop-container .desktop-head .ptn {
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        border-radius: 3px;
+        top: 50%;
+        background: #000;
+        opacity: 0.2; }
+      .desktop-wrapper .desktop-container .desktop-head .ptn:nth-child(1) {
+        left: 6px; }
+      .desktop-wrapper .desktop-container .desktop-head .ptn:nth-child(2) {
+        left: 16px; }
+      .desktop-wrapper .desktop-container .desktop-head .ptn:nth-child(3) {
+        left: 26px; }
+    .desktop-wrapper .desktop-container .desktop-screen {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 21px;
+      border-radius: 5px 5px 0px 0px; }
+      .desktop-wrapper .desktop-container .desktop-screen img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        margin-top: 21px;
+        animation-name: desktopScroll;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-timing-function: cubic-bezier(1, 0.005, 0.305, 1); }
+
+@keyframes fade-in {
+  10% {
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes desktopScroll {
+  10% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(calc(-50% + 285px)); }
+  100% {
+    transform: translateY(calc(-100% + 370px)); } }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

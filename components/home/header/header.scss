@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+
+
+.header-container {
+   
+    height: calc(100vh - 56px);
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: -56px;
+    color: #fff;
+    width: 100vw;
+
+    .header-canvas {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -3;
+        min-height: 700px;
+    }
+	// background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #85B79D, #8B728E, #DAA89B, #84DCC6, #4B4E6D, #95A3B3);
+	// background-size: 3000% 3000%;
+	// -webkit-animation: Gradient 280s ease infinite;
+	// -moz-animation: Gradient 280s ease infinite;
+	// animation: Gradient 280s ease infinite;
+
+    .leftContainer {
+        padding: 40px;
+        text-align: center;
+        h1 {
+            animation: fade-in 2s;
+            opacity: 1;
+            font-weight: 900;
+            font-size: 44px;
+            font-family: 'Roboto', sans-serif;
+
+            b {
+                color: rgba($color: #fff, $alpha: 0.5);
+            }
+        }
+
+        
+    }
+
+    .rightContainer {
+
+        h4 {
+            padding: 30px;
+            animation: fade-in 2s;
+            font-weight: bold;
+        }
+
+        width: 50%;
+        .logoContainer {
+            color: white;
+            position: relative;
+            width: 360px;
+            height: 250px;
+            margin-top: 200px;
+            transform: rotate(-30deg) skew(25deg) scale(.8);
+            transition: 0.5s;
+            animation: skew-logo 2s;
+            animation-delay: 1s;
+            opacity: 1;
+            img {
+                position: absolute;
+                width: 100%;
+                transition: 0.5s;
+            }
+        }
+
+        .logoContainer img:nth-child(4) {
+            transform: translate(60px, -60px);
+            opacity: 1;
+            -webkit-animation: image-4 2s infinite; /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+            animation: image-4 2s infinite;
+            animation-direction: alternate;
+        }
+        .logoContainer img:nth-child(3) {
+            transform: translate(40px, -40px);
+            opacity: .8;
+            -webkit-animation: image-3 2s infinite; /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+            animation: image-3 2s infinite;
+            animation-direction: alternate;
+        }
+        .logoContainer img:nth-child(2) {
+            transform: translate(20px, -20px);
+            opacity: .6;
+            -webkit-animation: image-2 2s infinite; /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+            animation: image-2 2s infinite;
+            animation-direction: alternate;
+        }
+        .logoContainer img:nth-child(1) {
+            transform: translate(0px, 0px);
+            opacity: .4;
+            -webkit-animation: image-1 2s infinite; /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+            animation: image-1 2s infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes image-4 {
+            0%   {transform: translate(60px, -60px);}
+            100% {transform: translate(160px, -160px);}
+          }
+          @keyframes image-3 {
+            0%   {transform: translate(40px, -40px);}
+            100% {transform: translate(120px, -120px);}
+          }
+          @keyframes image-2 {
+            0%   {transform: translate(20px, -20px);}
+            100% {transform: translate(80px, -80px);}
+          }
+          @keyframes image-1 {
+            0%   {transform: translate(0px, 0px);}
+            100% {transform: translate(40px, -40px);}
+          }
+    }
+}
+
+// Keyframes
+@keyframes fade-in {
+    0%   {transform: translateY(30px); opacity: 0;}
+    100% {transform: translateY(0px); opacity:1;}
+  }
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
