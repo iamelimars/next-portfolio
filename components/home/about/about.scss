@@ -1,0 +1,46 @@
+.about-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    .about-text {
+        width: 50%;
+        min-width: 300px;
+        padding: 50px;
+        padding-left: 100px;
+        h2 {
+            color: #363F54;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px 0px;
+            line-height: 42px;
+        }
+        p {
+            color: #8A99C0;
+            line-height: 42px;
+            font-size: 20px;
+        }
+    }
+
+    .about-action {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        a {
+            margin-bottom: 20px;
+            padding: 30px;
+            background: #8A99C0;
+            border-radius: 60px;
+            color: white;
+        }
+        p {
+            color: #363F54;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    }
+}
