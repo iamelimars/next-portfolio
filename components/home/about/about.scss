@@ -44,3 +44,10 @@
         }
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .about-section .about-text {
+      padding: 20px;
+      width: 100%;
+    }
+  }

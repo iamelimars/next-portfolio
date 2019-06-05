@@ -11,7 +11,7 @@ const Projects = () => {
     console.log(data.projects.results);
     const projects = data.projects.results
     return (
-        <Container>
+        <>
             <div className="projects-section">
                 <div className="projects-title">
                     <h2>PROJECTS</h2>
@@ -20,15 +20,14 @@ const Projects = () => {
                  {projects.map((project, index) => {
                     console.log(project);
                     if (index % 2) {
-                        return <ProjectContainer alt="right" project={project} />
+                        return <ProjectContainer key={index} alt="right" project={project} />
                     } else {
-                        return <ProjectContainer alt="left" project={project} />
+                        return <ProjectContainer key={index} alt="left" project={project} />
                     }
-                    
                 })}
                 </div>
             </div>
-        </Container>
+        </>
     )
 }
 

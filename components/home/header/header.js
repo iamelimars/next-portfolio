@@ -18,8 +18,8 @@ class Header extends React.Component {
             states : {
                 "default-state": {
                     gradients: [
-                        ['#ff9966', '#ff5e62'],
-                        ['#00F260', '#0575E6'],
+                        ['#8A99C0', '#363F54'],
+                        ['#E8C547', '#0575E6'],
                         ['#e1eec3', '#f05053']
                     ]
                 }

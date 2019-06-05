@@ -6,6 +6,9 @@ import About from '../components/home/about/about'
 import Projects from '../components/home/projects/projects'
 import Prismic from 'prismic-javascript';
 import Page from '../components/Page';
+import Skills from '../components/home/skills/skills'
+import Footer from '../components/common/footer/footer'
+import Contact from '../components/home/contact/contact'
 
 const apiEndpoint = 'https://eli-portfolio.cdn.prismic.io/api/v2';
 
@@ -42,6 +45,9 @@ class Home extends Component {
                 <Header />
                 <About />
                 <Projects />
+                <Contact /> 
+                <Skills />
+                <Footer />
             </Page>
         )
     }
