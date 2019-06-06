@@ -1,0 +1,14 @@
+footer {
+    background-color: #F6F6F6;
+    padding: 35px 40px;
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        color: #8A99C0;
+        p {
+            font-size: .8rem;
+        }
+    }
+}

@@ -27,7 +27,7 @@ function getProjects() {
         .then(api => {
             // console.log(api);
             const proj = api.query(Prismic.Predicates.at('document.type', 'works'), {
-                orderings: '[my.works.first_publication_date desc]'
+                orderings: '[my.works.last_publication_date]'
             })
 
             // console.log(proj);

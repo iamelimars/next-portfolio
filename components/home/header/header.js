@@ -18,9 +18,13 @@ class Header extends React.Component {
             states : {
                 "default-state": {
                     gradients: [
-                        ['#8A99C0', '#363F54'],
-                        ['#E8C547', '#0575E6'],
-                        ['#e1eec3', '#f05053']
+                        // ['#ff9a9e', '#fad0c4'],
+                        // ['#ffecd2 ', '#fcb69f'],
+                        // ['#a1c4fd ', '#c2e9fb']
+                        ['#ff9a9e', '#fad0c4'],
+                        ['#ffecd2', '#fcb69f'],
+                        ['#a1c4fd', '#c2e9fb'],
+                        ['#667eea', '#764ba2']
                     ]
                 }
             }
@@ -43,7 +47,7 @@ class Header extends React.Component {
                 </div>
                 <div className="rightContainer">
                     <DesktopContainer img='/static/zalasupplyfull.png' />
-                    <h4>ZALA SUPPLY</h4>
+                    <a href="https://zalasupply.com/" target="_blank"><h4>ZALA SUPPLY</h4></a>
                     {/* <div className="logoContainer">
                         <img src="/static/zalasupply.png" alt="Zala Supply"/>
                         <img src="/static/zalasupply.png" alt="Zala Supply"/>

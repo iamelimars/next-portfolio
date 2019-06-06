@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900);
 .header-container {
+  padding-top: 30px;
   height: calc(100vh - 56px);
   height: 80vh;
   min-height: 700px;
@@ -32,10 +33,16 @@
         color: rgba(255, 255, 255, 0.5); }
   .header-container .rightContainer {
     width: 50%; }
-    .header-container .rightContainer h4 {
-      padding: 30px;
-      animation: fade-in 2s;
-      font-weight: bold; }
+    .header-container .rightContainer a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 500ms; }
+      .header-container .rightContainer a h4 {
+        padding: 30px;
+        animation: fade-in 2s;
+        font-weight: bold; }
+    .header-container .rightContainer a:hover {
+      color: #fff; }
     .header-container .rightContainer .logoContainer {
       color: white;
       position: relative;
@@ -112,6 +119,15 @@
   100% {
     transform: translate(40px, -40px); } }
 
+@media only screen and (max-width: 1216px) {
+  .header-container .rightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .header-container .rightContainer h1 {
+      font-size: 30px; } }
+
 @keyframes fade-in {
   0% {
     transform: translateY(30px);
@@ -146,7 +162,7 @@
 
 .desktop-wrapper {
   position: relative;
-  width: 70%;
+  width: 80%;
   height: 21vw;
   min-width: 200px;
   min-height: 300px;
@@ -199,6 +215,10 @@
         animation-fill-mode: none;
         animation-timing-function: cubic-bezier(1, 0.005, 0.305, 1); }
 
+@media only screen and (max-width: 500px) {
+  .header-container .left-container h1 {
+    font-size: 30px; } }
+
 @keyframes fade-in {
   10% {
     transform: translateY(30px);
@@ -206,6 +226,14 @@
   100% {
     transform: translateY(0px);
     opacity: 1; } }
+
+@keyframes desktopScroll {
+  10% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(calc(-50% + 285px)); }
+  100% {
+    transform: translateY(calc(-100% + 370px)); } }
 
 @keyframes desktopScroll {
   10% {
@@ -357,12 +385,13 @@ body {
     color: white;
     padding: 10px 20px;
     font-size: 12px;
-    border-radius: 20px;
+    border-radius: 30px;
     margin-left: 20px;
-    box-shadow: 0px 14px 28px rgba(138, 153, 192, 0.2);
-    transition: all 1s; }
+    box-shadow: 0px 17px 10px -10px rgba(138, 153, 192, 0.6);
+    transition: all ease-in-out 300ms; }
   .project-text a:hover {
-    box-shadow: 0 8px 16px 0 rgba(138, 153, 192, 0.3), 0 6px 20px 0 rgba(138, 153, 192, 0.25);
+    box-shadow: 0px 22px 10px -13px rgba(138, 153, 192, 0.4);
+    transform: translate(0px, -5px) scale(1.1);
     text-decoration: none; }
 
 @media only screen and (max-width: 900px) {
@@ -386,21 +415,28 @@ body {
 .skills-section {
   padding: 30px;
   margin-top: 50px; }
-  .skills-section .skills-wrapper {
-    background: #F8F8F8;
-    border-radius: 15px 50px;
-    box-shadow: 0px 14px 28px rgba(138, 153, 192, 0.2); }
-    .skills-section .skills-wrapper .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 60px 0px;
-      color: #8A99C0; }
-      .skills-section .skills-wrapper .skills-container h1 {
-        font-size: 1.3rem;
-        color: #363F54; }
+  .skills-section .skills-wrapper .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 60px 0px;
+    color: #8A99C0; }
+    .skills-section .skills-wrapper .skills-container h1 {
+      font-size: 1.3rem;
+      color: #363F54; }
 
+footer {
+  background-color: #F6F6F6;
+  padding: 35px 40px; }
+  footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #8A99C0; }
+    footer .footer-content p {
+      font-size: .8rem; }
 
 @keyframes growRight {
   from {
@@ -421,7 +457,7 @@ body {
 .contact-wrapper {
   border-radius: 15px 50px;
   background: #E8C547;
-  box-shadow: 10px 14px 28px rgba(232, 197, 71, 0.6);
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.1);
   padding: 80px 40px;
   display: flex;
   flex-direction: column;

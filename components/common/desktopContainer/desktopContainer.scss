@@ -1,6 +1,6 @@
 .desktop-wrapper {
     position: relative;
-    width: 70%;
+    width: 80%;
     height: 21vw;
     min-width: 200px;
     min-height: 300px;
@@ -67,10 +67,34 @@
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .header-container {
+        .left-container {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+  }
+
 @keyframes fade-in {
     10%   {transform: translateY(30px); opacity: 0;}
     100% {transform: translateY(0px); opacity:1;}
   }
+
+@keyframes desktopScroll {
+    10% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% + 285px));
+    }
+
+    100% {
+        transform: translateY(calc(-100% + 370px));
+    }
+}
 
 @keyframes desktopScroll {
     10% {

@@ -2,7 +2,7 @@
 
 
 .header-container {
-   
+   padding-top: 30px;
     height: calc(100vh - 56px);
     height: 80vh;
     min-height: 700px;
@@ -47,12 +47,22 @@
     }
 
     .rightContainer {
-
-        h4 {
-            padding: 30px;
-            animation: fade-in 2s;
-            font-weight: bold;
+        // width: 100%;
+        a {
+            text-decoration: none;
+            color: rgba($color: #fff, $alpha: 0.5);
+            transition: all 500ms;
+            h4 {
+                padding: 30px;
+                animation: fade-in 2s;
+                font-weight: bold;
+            }
         }
+
+        a:hover {
+            color: #fff;
+        }
+        
 
         width: 50%;
         .logoContainer {
@@ -124,6 +134,21 @@
           }
     }
 }
+
+//Media Queries
+@media only screen and (max-width: 1216px) {
+    .header-container {
+        .rightContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+  }
 
 // Keyframes
 @keyframes fade-in {
