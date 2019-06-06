@@ -21,6 +21,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "now-build": "next build",
     "export": "npm run build && next export"
   },
   "author": "",
