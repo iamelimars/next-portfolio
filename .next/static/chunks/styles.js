@@ -177,7 +177,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1559785064309");
+            injectCss(link, link.href.split("?")[0] + "?unix=1559792545728");
           });
       }
     }
