@@ -150,6 +150,19 @@
     }
   }
 
+  @media only screen and (max-width: 900px) {
+      
+      .header-container {
+        .leftContainer {
+            padding-bottom: 0px;
+            h1 {
+                font-size: 27px !important;
+            }
+        }
+    }
+  }
+
+
 // Keyframes
 @keyframes fade-in {
     0%   {transform: translateY(30px); opacity: 0;}

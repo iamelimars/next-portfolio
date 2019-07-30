@@ -3,7 +3,7 @@ import './projectContainer.scss'
 
 const ProjectContainer = ({alt, project}) => {
     const {tags} = project;
-    console.log(tags);
+    // console.log(tags);
     
     if (alt === "left") {
         return <Left direction={alt} tags={tags} project={project} />

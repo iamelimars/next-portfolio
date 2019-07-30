@@ -1,15 +1,35 @@
-import React, { useContext } from 'react';
+import React, { useContext, Suspense } from 'react';
 import './projects.scss';
 import {Container} from 'react-bootstrap';
 import ProjectContainer from './projectContainer';
 import { PrismicContext } from '../../PrismicContext';
+// import { PropagateLoader } from 'react-spinners';
 
 
-const Projects = () => {
+
+const Projects = ({projects}) => {
     const data = useContext(PrismicContext)
 
-    console.log(data.projects.results);
-    const projects = data.projects.results
+    // console.log(data.projects.results);
+    // const projects = data.projects.results
+    if (!projects) {
+        return (
+                <div>
+                    <style jsx>{`
+                        .loading-container {
+                            height: 400px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    `}</style>
+                    <div className="loading-container">
+                        {/* <PropagateLoader color={'#8A99C0'}/> */}
+                    </div>
+                </div>
+            )
+    }
     return (
         <>
             <div className="projects-section">
@@ -18,7 +38,7 @@ const Projects = () => {
                 </div>
                 <div className="projects">
                  {projects.map((project, index) => {
-                    console.log(project);
+                    // console.log(project);
                     if (index % 2) {
                         return <ProjectContainer key={index} alt="right" project={project} />
                     } else {

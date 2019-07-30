@@ -9,8 +9,14 @@ import Page from '../components/Page';
 import Skills from '../components/home/skills/skills'
 import Footer from '../components/common/footer/footer'
 import Contact from '../components/home/contact/contact'
+import dynamic from 'next/dynamic';
 
 const apiEndpoint = 'https://eli-portfolio.cdn.prismic.io/api/v2';
+
+// const Projects = dynamic(()=>import('../components/home/projects/projects'), {
+//     ssr: false,
+//     loading: () => <h1>Loadingggggg............</h1>
+// })
 
 class Home extends Component {
     
@@ -32,7 +38,7 @@ class Home extends Component {
       }
 
     render() {
-        // console.log(this.props.projects);
+        console.log(this.props.projects);
         return (
             <Page>
                 <style global jsx>{`
@@ -44,7 +50,8 @@ class Home extends Component {
                 <Navbar color="rgba(1,1,1,0)" />
                 <Header />
                 <About />
-                <Projects />
+                <Projects projects={this.props.projects} />
+                
                 <Contact /> 
                 <Skills />
                 <Footer />

@@ -14,7 +14,8 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-spinners": "^0.5.13"
   },
   "devDependencies": {},
   "scripts": {
